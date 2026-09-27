@@ -1,0 +1,4 @@
+CREATE TABLE `street` (
+    id INT AS PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL
+);
