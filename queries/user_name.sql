@@ -1,9 +1,11 @@
+/* Find specific user */
+
 SELECT *
-FROM passenger
+FROM user
 WHERE last_name = 'Шевченко'
   AND first_name = 'Олександр';
 
 EXPLAIN SELECT *
-FROM passenger
+FROM user
 WHERE last_name = 'Шевченко'
   AND first_name = 'Олександр';

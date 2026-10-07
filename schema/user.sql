@@ -1,0 +1,9 @@
+CREATE TABLE `user` (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(20) NOT NULL,
+  phone VARCHAR(20) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+);
+
+CREATE INDEX idx_user_name ON user (last_name, first_name);
