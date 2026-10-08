@@ -8,5 +8,8 @@ CREATE TABLE `trip` (
     'in_progress',
     'completed',
     'cancelled'
-  ) NOT NULL DEFAULT 'pending'
+  ) NOT NULL DEFAULT 'pending',
+
+  FOREIGN KEY (driver_id) REFERENCES user(id),
+  FOREIGN KEY (passenger_id) REFERENCES user(id)
 );

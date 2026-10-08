@@ -1,0 +1,68 @@
+Table user {
+  id int [pk, increment]
+  first_name varchar(20) [not null]
+  last_name varchar(20) [not null]
+  phone varchar(20) [not null, unique]
+  email varchar(255) [not null, unique]
+}
+
+Table roles {
+  id int [pk, increment]
+  name varchar(50) [not null]
+}
+
+Table user_role {
+  user_id int [not null]
+  role_id int [not null]
+
+  indexes {
+    (user_id, role_id) [pk]
+  }
+}
+
+Table street {
+  id int [pk, increment]
+  name varchar(255) [not null]
+}
+
+Table house {
+  id int [pk, increment]
+  house_number varchar(50) [not null]
+  street_id int [not null]
+}
+
+Table trip {
+  id int [pk, increment]
+  driver_id int [not null]
+  passenger_id int [not null]
+  status varchar [not null, default: 'pending']
+}
+
+Table rating {
+  id int [pk, increment]
+  trip_id int [not null]
+  from_user_id int [not null]
+  to_user_id int [not null]
+  score tinyint [not null]
+  comment varchar(255)
+
+  indexes {
+    to_user_id [name: 'idx_rating_to_user']
+    (trip_id, from_user_id) [unique]
+  }
+}
+
+
+// Relationships
+
+Ref: user_role.user_id > user.id
+Ref: user_role.role_id > roles.id
+
+Ref: house.street_id > street.id
+
+Ref: trip.driver_id > user.id
+Ref: trip.passenger_id > user.id
+
+Ref: rating.trip_id > trip.id
+Ref: rating.from_user_id > user.id
+Ref: rating.to_user_id > user.id
