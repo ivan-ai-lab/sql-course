@@ -5,5 +5,3 @@ CREATE TABLE `user` (
   phone VARCHAR(20) NOT NULL UNIQUE,
   email VARCHAR(255) NOT NULL UNIQUE,
 );
-
-CREATE INDEX idx_user_name ON user (last_name, first_name);

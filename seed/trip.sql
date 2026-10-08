@@ -1,0 +1,35 @@
+INSERT INTO trip (driver_id, passenger_id, status)
+VALUES (1, 2, 'completed'),
+  (2, 3, 'completed'),
+  (9, 4, 'completed'),
+  (10, 5, 'completed'),
+  (5, 1, 'completed'),
+  (1, 3, 'completed'),
+  (2, 4, 'completed'),
+  (9, 5, 'completed'),
+  (10, 1, 'completed'),
+  (5, 2, 'completed'),
+
+  (1, 4, 'accepted'),
+  (2, 5, 'accepted'),
+  (9, 1, 'accepted'),
+  (10, 2, 'accepted'),
+  (5, 3, 'accepted'),
+
+  (1, 5, 'in_progress'),
+  (2, 1, 'in_progress'),
+  (9, 2, 'in_progress'),
+  (10, 3, 'in_progress'),
+  (5, 4, 'in_progress'),
+
+  (1, 2, 'pending'),
+  (2, 3, 'pending'),
+  (9, 4, 'pending'),
+  (10, 5, 'pending'),
+  (5, 1, 'pending'),
+
+  (1, 3, 'cancelled'),
+  (2, 4, 'cancelled'),
+  (9, 5, 'cancelled'),
+  (10, 1, 'cancelled'),
+  (5, 2, 'cancelled');
