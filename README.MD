@@ -1,14 +1,14 @@
-# 🚕 Ride Service Database
+### 🚕 Ride Service Database
 
 SQL database for a ride service.
 
-## 📊 Database Structure
+### 📊 Database Structure
 
 ER diagram:
 
-![Database ER diagram](./diagram/database.svg)
+![Database ER diagram](./diagram/db.png)
 
-## 🗂️ Project Structure
+### 🗂️ Project Structure
 
 ```text
 sql/
