@@ -4,7 +4,7 @@ CREATE TABLE `rating` (
   from_user_id INT NOT NULL,
   to_user_id INT NOT NULL,
   score TINYINT NOT NULL,
-  comment TEXT,
+  comment VARCHAR(255),
   FOREIGN KEY (trip_id) REFERENCES trip(id),
   FOREIGN KEY (from_user_id) REFERENCES user(id),
   FOREIGN KEY (to_user_id) REFERENCES user(id),
